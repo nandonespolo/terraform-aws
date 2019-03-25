@@ -34,4 +34,8 @@ You can test if it's working by issuing the following command:
 aws ec2 describe-regions
 ```
 
-... to be continued
+## Make this work:
+Add you aws credentials to ```./terraform/terraform.tfvars``` and ```./terraform/storage.main.tf```
+Run the module storage to create an S3 bucket and the table on DynamoDB ```./terraform/storage/main.tf```.
+Add the bucketname created to the ```backend.tf``` file
+On ./terraform run ```terraform init```, ```terraform plan```, have a look, then run ```terraform aaply --auto-approve```
