@@ -38,7 +38,8 @@ aws ec2 describe-regions
 1. Add you aws credentials to ```./terraform/terraform.tfvars``` and ```./terraform/storage.main.tf```
 2. Run the module storage to create an S3 bucket and the table on DynamoDB ```./terraform/storage/main.tf```.
 3. Add the bucketname created to the ```backend.tf``` file
-4. On ./terraform run ```terraform init```, ```terraform plan```, have a look, then run ```terraform aaply --auto-approve```
+4. Add your ssh key to ```./terraform```, call it anything, but change the terraform file, don't let it be confuse
+5. On ./terraform run ```terraform init```, ```terraform plan```, have a look, then run ```terraform aaply --auto-approve```
 
 ## What??
 I know, terraform.tfstate and some other stuff in here? Yes, yes, but it has nothing real in it. Next time I add them to .gitignore file. Happy? :)
